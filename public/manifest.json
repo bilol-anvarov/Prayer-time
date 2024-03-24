@@ -1,0 +1,21 @@
+{
+    "name": "Prayer time by A.B.A",
+    "short_name": "Prayer time",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#242424",
+    "background_color": "#242424",
+    "icons": [
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  
