@@ -22,6 +22,10 @@ function findClosestLargerNumber(target, numbers) {
       // Если число больше целевого и меньше ближайшего большего числа, обновляем его
       if (number > target && number < closestLargerNumber) {
           closestLargerNumber = number;
+          // return closestLargerNumber 
+        } 
+        if(target > numbers[5]){
+        closestLargerNumber = numbers[0]
       }
   });
   
@@ -126,9 +130,9 @@ const  AllTime= React.memo((props) => {
     if(closestMoment == 'asr') setNextTime(asr)
     if(closestMoment == 'maghrib') setNextTime(maghrib)
     if(closestMoment == 'isha') setNextTime(isha)
-  },[closestMoment])
+  },[closestTime])
   
-  // console
+  // console.log(closestMoment)
 
   return (
     <div className={`${classses.maindiv} ${loading && classses.loader}`}>
@@ -147,7 +151,7 @@ const  AllTime= React.memo((props) => {
             <OneTime 
                 next={true}
                 time={nextTime}
-            >Fadjr</OneTime>
+            >{closestMoment}</OneTime>
         </div>
         <h3>All times</h3>
         <FlexDiv>
