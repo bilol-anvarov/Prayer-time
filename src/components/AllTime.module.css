@@ -10,10 +10,10 @@
     background-position-y: 70%;
     background-position-x: left;
     backdrop-filter: brightness(50%);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)) , url('./background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)) , url('/background.jpg');
 }
 .maindiv.loader{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.9)) , url('./background.jpg') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.9)) , url('/background.jpg') !important;
 }
 .h1{
     text-align: center;
