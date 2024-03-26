@@ -54,12 +54,10 @@ const  AllTime= React.memo((props) => {
   // useEffect(() => {
     const fetchData = async () => {
       try {
-        const currentDate = new Date();
-        const formattedDate = `${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
         const location = await fetch('https://api.bigdatacloud.net/data/reverse-geocode-client')
         const jsonLocation = await location.json()
         const method = '2'
-        const response = await fetch(`https://api.aladhan.com/v1/timingsByCity/${formattedDate}?city=${jsonLocation.countryName}&country=${jsonLocation.city}&method=${method}`);
+        const response = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=${jsonLocation.countryName}&country=${jsonLocation.city}&method=${method}&school=1`);
         setCity(jsonLocation.city)
         const jsonData = await response.json();
         setData(jsonData.data.timings);
