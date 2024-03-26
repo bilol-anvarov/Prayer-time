@@ -3,8 +3,8 @@
     "short_name": "Prayer time",
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "#242424",
-    "background_color": "#242424",
+    "theme_color": "#535359",
+    "background_color": "#535359",
     "icons": [
       {
         "src": "icon.png",

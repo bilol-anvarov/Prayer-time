@@ -22,10 +22,9 @@ function findClosestLargerNumber(target, numbers) {
       // Если число больше целевого и меньше ближайшего большего числа, обновляем его
       if (number > target && number < closestLargerNumber) {
           closestLargerNumber = number;
-          // return closestLargerNumber 
         } 
         if(target > numbers[5]){
-        closestLargerNumber = numbers[0]
+        closestLargerNumber = numbers[5]
       }
   });
   
@@ -64,6 +63,7 @@ const  AllTime= React.memo((props) => {
         setCity(jsonLocation.city)
         const jsonData = await response.json();
         setData(jsonData.data.timings);
+        console.log(jsonData.data.timings)
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -72,7 +72,7 @@ const  AllTime= React.memo((props) => {
         }
       };
         
-    const {apiData, error, isLoading} = useQuery('randomFacts', fetchData,{
+    const { error, isLoading} = useQuery('randomFacts', fetchData,{
       staleTime: 60000, // Время в миллисекундах, после которого данные считаются устаревшими (например, 1 минута)
       cacheTime: 300000, // Время в миллисекундах, в течение которого данные сохраняются в кэше (например, 5 минут)
     });

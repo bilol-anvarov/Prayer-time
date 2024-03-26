@@ -127,6 +127,9 @@
     font-size: 45px;
     width: 110px;
   }
+  .big > h3{
+    text-transform: capitalize;
+  }
   .minute,
   .hour {
     position: absolute;
