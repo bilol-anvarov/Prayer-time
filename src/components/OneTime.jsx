@@ -3,7 +3,7 @@ import  './OneTime.css'
 
 export default function OneTime({time, children, next}) {
 
-    const [hoursSplit, minutes] = time.split(':'); //time.split(':')  
+    const [hoursSplit, minutes] = time.split(':'); 
     const hours = parseInt(hoursSplit)
 
     const hour = (hours > 12 ? hours - 12 : hours) * 30;

@@ -58,10 +58,9 @@ const  AllTime= React.memo((props) => {
         const jsonLocation = await location.json()
         const method = '2'
         const response = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=${jsonLocation.countryName}&country=${jsonLocation.city}&method=${method}&school=1`);
-        setCity(jsonLocation.city)
         const jsonData = await response.json();
         setData(jsonData.data.timings);
-        console.log(jsonData.data.timings)
+        setCity(jsonData.data.meta.timezone.split('/')[1])
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
